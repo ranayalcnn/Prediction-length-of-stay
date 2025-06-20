@@ -51,6 +51,25 @@ This project aims to predict the length of stay (LOS) in the Intensive Care Unit
 * Label Alignment: Mapping LOS with time windows is non-trivial.
 * Compute: High-resolution data demands significant resources.
 
+## How to Download the Dataset
+
+1. **Request Access**  
+   Go to [PhysioNet Credentialing](https://physionet.org/works/MIMICIIIClinicalDatabase/)  
+   - Create an account  
+   - Complete CITI training  
+   - Accept the data use agreement for MIMIC-III Waveform
+
+2. **Get Matched Records List**  
+   Download the records file from:  
+   [https://physionet.org/static/published-projects/mimic3wdb/mimic3wdb-1.0/matched/RECORDS](https://physionet.org/static/published-projects/mimic3wdb/mimic3wdb-1.0/matched/RECORDS)  
+   Save it as `records.txt` in the project root.
+
+3. **Download Data (30–39 folders)**  
+   Run the script below to download a balanced subset:
+
+   ```bash
+   python download_records.py
+
 ## How to Run
 
 1. Clone the repo:
